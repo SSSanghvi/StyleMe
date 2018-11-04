@@ -31,6 +31,7 @@ def KelvinToFaren(K):
 maxTemp = KelvinToFaren(maxKelvin)
 minTemp = KelvinToFaren(minKelvin)
 
+
 # Determines which articles of clothing we will restrict
 def restrictOutfits(maxTemp, minTemp, windMPH):
     print("Hmm, let me think...")
@@ -59,8 +60,13 @@ def pairOutfits():
     outfits = restrictOutfits(maxTemp, minTemp, windMPH)
     print("Combining clothes in new and interesting ways...")
     matchedOutfits = []
-
+    thinking = 0
     for o in outfits:
+        if thinking == 5:
+            print("...")
+            thinking = 0
+        else:
+            thinking = thinking + 1
         if o[1] == 'dresses':
             matchedOutfits.append([o[0]])
         elif o[1] in bottoms:
@@ -70,7 +76,13 @@ def pairOutfits():
 
     print("Checking out your jacket collection...")
     temp = []
+    thinking = 0
     for outer in [o for o in outfits if o[1] in outerwear]:
+        if thinking == 5:
+            print("...")
+            thinking = 0
+        else:
+            thinking = thinking + 1
         for other in matchedOutfits:
             temp2 = other[:]
             temp2.append(outer[0])

@@ -12,7 +12,15 @@ visual_recognition = VisualRecognitionV3(
 def visRec():
     clothes = []
     filelist = os.listdir("assets/images/")
+    thinking = 0
     for i in filelist:
+        if thinking == 5:
+            print("...")
+            thinking = 0
+        else:
+            thinking += 1
+
+
         if i.endswith(".jpg") or i.endswith(".jpeg"):
             with open("assets/images/" + i, 'rb') as images_file:
                 classes = visual_recognition.classify(
