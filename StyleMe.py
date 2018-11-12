@@ -134,7 +134,7 @@ def displayImages(list_im):
     # perform the actual resizing of the image and show it
     resized = cv2.resize(vis, dim, interpolation = cv2.INTER_AREA)
     cv2.imshow("Your Outfit!", resized)
-    cv2.waitKey(1500)
+    cv2.waitKey(5000)
 
 for _ in range(len(matches)):
     thisOOTD = (matches[random.randint(0, len(matches) - 1)])
