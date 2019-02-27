@@ -1,5 +1,5 @@
 # StyleMe 
-#### By Sahil Sangvi and Jacqueline Zhang
+#### By Sahil Sanghvi and Jacqueline Zhang
 
 ## Introduction
 Everyone has those days where they wake up and are either too tired or too distracted to choose a proper outfit - be it a casual errand day, important day at the workplace, or day around town.  
